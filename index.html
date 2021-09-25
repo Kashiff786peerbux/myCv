@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kashiff</title>
+    <link rel="shortcut icon" href="images/icon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Peerbux Mohammad Kashiff Sharafrudeen">
+    <meta name="keywords " content="Kashiff's cv, Peerbux, Mohammad, Kashiff, Sharafrudeen">
+    <meta charset="utf-8">
+    <meta name="description"  content="personal cv presented on a website">
+    <script src="https://kit.fontawesome.com/yourcode.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="webFormat">
+        <nav>
+            <label id="myLogoLabel" for=""><img id="myLogo" src="images/Logo.png" alt="mk Logo"></label>
+            <ul>
+                <li class="icon_list">
+                    <a class="icon_anchor" id="aboutme" href="#aboutme_section">
+                        <i class="bi bi-person active" id="icon_aboutme"></i>
+                        <label class="icon_label active" id="aboutme_label_id" for="icon_aboutme">About me</label>
+                    </a>
+                </li>
+                <li class="icon_list">
+                    <a class="icon_anchor"  id="contact" href="#contact_section">
+                        <i class="bi bi-telephone" id="icon_contact"></i>
+                        <label class="icon_label" id="contact_label_id" for="icon_contact">Contact</label>
+                    </a>
+                </li>
+                <li class="icon_list">
+                    <a class="icon_anchor" id="skills" href="#skills_section">
+                        <i class="bi bi-stack" id="icon_skills"></i>
+                        <label class="icon_label" id="skills_label_id" for="icon_skills">Skills</label>
+                    </a>
+                </li>
+                <li class="icon_list">
+                    <a class="icon_anchor" id="projects"  href="#projects_section">
+                        <i class="bi bi-list-task" id="icon_projects"></i>
+                        <label class="icon_label" id="projects_label_id" for="icon_projects">Projects</label>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
+        <section id="aboutme_section">
+
+        </section >
+        <section id="contact_section">
+            <div style="color: white">shfdkjsabdkjmsfbkjdsfbkdsj</div>
+        </section>
+        <section id="skills_section">
+            
+        </section>
+        <section id="projects_section">
+    
+        </section>
+    </div>
+    <div id="printedFormat">
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("nav li a").click(function(){
+                myId = $(this).attr("id");
+                $(" i, .icon_label").css("color", "gray");
+                $("i, .icon_label").removeClass("active");
+                $(this).children().addClass("active");
+                if(myId == "aboutme"){
+                    color = "rgb(18, 107, 129)";
+                    $("#myLogo").css("filter", "none");
+                }else if(myId == "contact"){
+                    $("#myLogo").css("filter", "hue-rotate(100deg)");
+                    color = "hsl(285, 100%, 41%)";
+                }else if(myId == "skills"){
+                    $("#myLogo").css("filter", "hue-rotate(285deg)");
+                    color = "hsl(133, 100%, 24%)";
+                }else{
+                    $("#myLogo").css("filter", "hue-rotate(240deg)");
+                   color = "hsl(67, 100%, 34%)";
+                }
+                $(".active").css("color", color);
+                $('head').append('<style>nav:before{background: linear-gradient(hsl(201, 100%, 4%) 0%,'+color+'50%, hsl(201, 100%, 4%)100% )}</style>');
+                $(function () {
+                    $("nav li").hover(function(){
+                        $(this).children().children().css("color", color);
+                    }, function () {
+                        // change to any color that was previously used.
+                        $(this).children().children().css("color", "gray");
+                        $(".active").css("color", color);
+                    });
+                });
+
+            });
+
+            $("section").mouseover(function(){
+                myId = $(this).attr("id");
+                $(" i, .icon_label").css("color", "gray");
+                $("i, .icon_label").removeClass("active");
+                if(myId == "aboutme_section"){
+                    color = "rgb(18, 107, 129)";
+                    $("#myLogo").css("filter", "none");
+                    $("#aboutme_label_id, #icon_aboutme").addClass("active");
+                }else if(myId == "contact_section"){
+                    $("#myLogo").css("filter", "hue-rotate(100deg)");
+                    color = "hsl(285, 100%, 41%)";
+                    $("#contact_label_id, #icon_contact").addClass("active");
+                }else if(myId == "skills_section"){
+                    $("#myLogo").css("filter", "hue-rotate(285deg)");
+                    color = "hsl(133, 100%, 24%)";
+                    $("#skills_label_id, #icon_skills").addClass("active");
+                }else{
+                    $("#myLogo").css("filter", "hue-rotate(240deg)");
+                   color = "hsl(67, 100%, 34%)";
+                   $("#projects_label_id, #icon_projects").addClass("active");
+                }
+                $(".active").css("color", color);
+                $('head').append('<style>nav:before{background: linear-gradient(hsl(201, 100%, 4%) 0%,'+color+'50%, hsl(201, 100%, 4%)100% )}</style>');
+
+                $(function () {
+                    $("nav li").hover(function(){
+                        $(this).children().children().css("color", color);
+                    }, function () {
+                        // change to any color that was previously used.
+                        $(this).children().children().css("color", "gray");
+                        $(".active").css("color", color);
+                    });
+                });
+
+            });
+
+
+            
+        });
+    </script>
+</body>
+
+</html>
