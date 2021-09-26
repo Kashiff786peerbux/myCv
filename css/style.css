@@ -5,6 +5,9 @@
     list-style: none;
     box-sizing: border-box;
 }
+#printedoFormat{
+    display: none;
+}
 
 /* linear-gradient(to bottom, hsl(0, 100%, 0%), rgb(20, 78, 105)); */
 html{
@@ -128,7 +131,7 @@ li a .icon_label{
     }
     nav:hover:before{
         height: 2px;
-        transform: translate(0px, 60px);
+        transform: translate(0px, 50px);
         animation: navAnimation2 0.8s infinite ease-in-out;
     }
     section{
@@ -190,3 +193,85 @@ li a .icon_label{
         width: 200vw;
     }
 }
+
+/* section 1 css */
+
+#myprofileimage_id{
+    --size:60%;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 20px;
+}
+#overlayImage{
+    position: absolute;
+    --size: 60%;
+    width: var(--size);
+    height: calc(var(--size) + 30px);
+    border-radius: 10px;
+    background: linear-gradient(80deg, rgba(0,0,0, .95), rgba(0,0,0, 0.0));
+    transform: translateY(-330px);
+}
+
+
+section#aboutme_section div div#profile_container {
+    position: absolute;
+    margin: 5%;
+}
+
+
+#profileLabel_id{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10%;
+}
+
+#myName_id{
+    font-family:cursive;
+    text-transform: uppercase;
+    animation: gradientColor  1s infinite ease-in-out;
+    font-weight: bold;
+}
+
+@keyframes gradientColor{
+    0%{
+        background: -webkit-linear-gradient(left,hsl(195, 100%, 80%)0%,hsl(195, 98%, 50%)20%,hsl(195, 98%, 50%)40%,hsl(195, 98%, 50%)60%,hsl(195, 98%, 50%)80%, hsl(195, 98%, 50%)100%);
+        -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+    20%{
+        background: -webkit-linear-gradient(left,hsl(195, 98%, 50%)0%,hsl(195, 100%, 80%)20%,hsl(195, 98%, 50%)40%,hsl(195, 98%, 50%)60%,hsl(195, 98%, 50%)80%, hsl(195, 98%, 50%)100%);
+        -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+    40%{
+        background: -webkit-linear-gradient(left,hsl(195, 98%, 50%)0%,hsl(195, 98%, 50%)20%,hsl(195, 100%, 80%)40%,hsl(195, 98%, 50%)60%,hsl(195, 98%, 50%)80%, hsl(195, 98%, 50%)100%);
+        -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+    60%{
+        background: -webkit-linear-gradient(left,hsl(195, 98%, 50%)0%,hsl(195, 98%, 50%)20%,hsl(195, 98%, 50%)40%,hsl(195, 100%, 80%)60%,hsl(195, 98%, 50%)80%, hsl(195, 98%, 50%)100%);
+        -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+    80%{
+        background: -webkit-linear-gradient(left,hsl(195, 98%, 50%)0%,hsl(195, 98%, 50%)20%,hsl(195, 98%, 50%)40%,hsl(195, 98%, 50%)60%,hsl(195, 100%, 80%)80%, hsl(195, 98%, 50%)100%);
+        -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+    100%{
+        background: -webkit-linear-gradient(left,hsl(195, 98%, 50%)0%,hsl(195, 98%, 50%)20%,hsl(195, 98%, 50%)40%,hsl(195, 98%, 50%)60%,hsl(195, 98%, 50%)80%, hsl(195, 100%, 80%)100%);
+        -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+}
+
+#introduction{
+    background: blue;
+    position: absolute;
+    width: 50vw;
+    height: 70vh;
+    margin: 8% 0 0 35%;
+}
+
+
+
