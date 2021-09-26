@@ -265,13 +265,73 @@ section#aboutme_section div div#profile_container {
     }
 }
 
-#introduction{
-    background: blue;
+div#introduction{
     position: absolute;
     width: 50vw;
-    height: 70vh;
-    margin: 8% 0 0 35%;
+    height: 50vh;
+    margin: 15% 0 0 35%;
+}
+
+div#introduction p{
+    margin:10%;
+    text-align: center;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.55vw;
+}
+
+div#introduction p span.intro_keywords{
+    color:hsl(197, 80%, 44%)
 }
 
 
+/* section 2 skills and technology */
+
+section#skills_section div{
+   display: block;
+}
+
+section#skills_section div div{
+    height: 80vh;
+    width: 30vw;
+    display: inline-block;
+    margin: 10vh 0 0 10vw;
+    border-radius: 20px;
+}
+
+section#skills_section div div header{
+    background: linear-gradient(100deg, hsla(153, 48%, 10%, 0.932), hsla(147, 82%, 36%, 0.281));
+    text-align: center;
+    padding: 5% 0 5% 0;
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+
+}
+section#skills_section div div#skills_content header{
+    background: linear-gradient(100deg, hsla(152, 49%, 7%, 0.932), hsla(147, 82%, 36%, 0.281));
+}
+
+section#skills_section div div#skills_content{
+    background: linear-gradient(100deg, hsla(154, 50%, 6%, 0.74), hsla(108, 82%, 26%, 0.185));
+}
+section#skills_section div div#technological_content{
+    background: linear-gradient(100deg, hsla(108, 82%, 26%, 0.185), hsla(108, 82%, 26%, 0.185));
+}
+section#skills_section div div ul{
+    position: absolute;
+    margin: 30px 0 0 50px;
+}
+section#skills_section div div label  {
+    color: rgb(50, 189, 15);
+    margin-left: 30px;
+    text-transform: uppercase;
+}
+section#skills_section div div .content-icon{
+    font-size: 2.60vw;
+}
+
+
+/* section 3 projects */
 
