@@ -158,6 +158,9 @@ li a .icon_label{
 
 
 @media screen and (max-width:640px) {
+    h3{
+        font-size: 1.3vh;
+    }
     nav{
         background:hsl(201, 100%, 1%) ;
         width: 100%;
@@ -209,6 +212,9 @@ li a .icon_label{
         margin-left: 70px;
     }
     
+    section#contact_section  div.contact-details{
+        font-size: 12px;
+    }
 
 }
 
@@ -231,34 +237,37 @@ li a .icon_label{
 
 /* section 1 css */
 
-#myprofileimage_id{
-    --size:60%;
-    width: var(--size);
-    height: var(--size);
-    border-radius: 20px;
+section#aboutme_section{
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    align-items: center;
 }
-#overlayImage{
-    position: absolute;
+section#aboutme_section  div#profile_container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: flex-start;
+    margin-left: 10vw;
+    height: 100vh;
+} 
+
+
+
+ #myprofileimage_id{
     --size: 60%;
     width: var(--size);
-    height: calc(var(--size) + 32px);
-    border-radius: 10px;
-    background: linear-gradient(80deg, rgba(0,0,0, .95), rgba(0,0,0, 0.0));
-    transform: translateY(-330px);
-}
+    height: calc(var(--size));
+     height: 100%;
+    border-radius: 20px;
+    margin-top: 10vh;
+} 
 
-
-section#aboutme_section div div#profile_container {
-    position: absolute;
-    margin: 5%;
-}
 
 
 #profileLabel_id{
     color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2vw;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 #myName_id{
@@ -305,7 +314,7 @@ div#introduction{
     position: absolute;
     width: 50vw;
     height: 50vh;
-    margin: 15% 0 0 35%;
+    margin: 0 0 0 35%;
 }
 
 div#introduction p{
@@ -323,19 +332,20 @@ div#introduction p span.intro_keywords{
 
 /* section 2 skills and technology */
 
-section#skills_section div{
-   display: block;
+section#skills_section {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
 }
 
-section#skills_section div div{
+section#skills_section  div{
     height: 80vh;
     width: 30vw;
-    display: inline-block;
-    margin: 10vh 0 0 10vw;
+    margin: auto;
     border-radius: 20px;
 }
 
-section#skills_section div div header{
+section#skills_section  div header{
     background: linear-gradient(100deg, hsla(153, 48%, 10%, 0.932), hsla(147, 82%, 36%, 0.281));
     text-align: center;
     padding: 5% 0 5% 0;
@@ -345,49 +355,56 @@ section#skills_section div div header{
     font-size: large;
 
 }
-section#skills_section div div#skills_content header{
+section#skills_section  div#skills_content header{
     background: linear-gradient(100deg, hsla(152, 49%, 7%, 0.932), hsla(147, 82%, 36%, 0.281));
 }
 
-section#skills_section div div#skills_content{
+section#skills_section  div#skills_content{
     background: linear-gradient(100deg, hsla(154, 50%, 6%, 0.74), hsla(108, 82%, 26%, 0.185));
 }
-section#skills_section div div#technological_content{
+section#skills_section  div#technological_content{
     background: linear-gradient(100deg, hsla(108, 82%, 26%, 0.185), hsla(108, 82%, 26%, 0.185));
 }
-section#skills_section div div ul{
-    position: absolute;
+section#skills_section  div ul{
     margin: 30px 0 0 50px;
 }
-section#skills_section div div label  {
+section#skills_section  div label  {
     color: rgb(50, 189, 15);
+    font-size: 1.30vw;
     margin-left: 30px;
     text-transform: uppercase;
 }
-section#skills_section div div .content-icon{
+section#skills_section  div .content-icon{
     font-size: 2.60vw;
 }
 
 
 /* section 3 projects */
-section#projects_section div ul li.project_content {
+
+section#projects_section  ul{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+}
+section#projects_section  ul li.project_content {
     background: radial-gradient( hsla(49, 98%, 21%, 0.9), hsla(51, 100%, 4%, 0.9));
     height: 40vh;
     width: 25vw;
-    display: inline-block;
     margin: 7vh 0 0 5vw;
     border-radius: 20px;
 }
-section#projects_section div ul li div header{
+section#projects_section ul li  header{
     color: hsl(67, 100%, 34%);
     padding: 10px 0 10px 0;
     text-align: center;
 }
-
-section#projects_section div ul li div div {
-    position: absolute;
+section#projects_section  ul li   .project_details{
+    padding: 0 1vw 1vw 1vh;
 }
-section#projects_section div ul li div  span{
+
+
+section#projects_section  ul li   span{
     display: list-item;
     list-style: circle;
     color: white;
@@ -396,45 +413,56 @@ section#projects_section div ul li div  span{
 }
 
 /* section 4 contact */
-
-section#contact_section  div.contact-details, div.contact-form{
-    height: 80vh;
-    width: 30vw;
-    display: inline-block;
-    margin: 10vh 0 0 10vw;
-    border-radius: 0 20px 20px 0 ;
+section#contact_section {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
 }
 
-section#contact_section  div.contact-details div{
-    position:absolute;
-    background: linear-gradient(to right, rgba(28, 4, 37, 0.6), rgba(38, 6, 51, 1.0));
-    height: 35%;
-    width: 35%;
-    margin-bottom: 30px;
-}
-section#contact_section  div.contact-details div:nth-child(1){
-    padding: 2%;
-}
-
-
-
-section#contact_section  div.contact-details div.location{
-    transform: translateY(120%);
-    height: 36%;
-}
 
 section#contact_section  div.contact-form{
+    height: 80vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 20px 20px 0 ;
     background: radial-gradient(rgba(94, 12, 126, 0.6), rgba(38, 6, 51, 1.0));
 }
 
+
+
+section#contact_section  div.contact-details-wrapper{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgba(10, 1, 14, 0.6), rgb(77, 12, 102));
+    height: 80vh;
+    width: 45vw;
+    margin: auto;
+}
+section#contact_section  div.contact-details{
+    padding: 0 3vw;
+}
+
+
+
+
+section#contact_section  div.location{
+    height: 30vh;
+}
+
+
+
 section#contact_section  div.contact-form div header{
-    position:absolute;
     color: white;
 }
 
 
 form{
     margin-left: 40px;
+    display: none;
 }
 
 
@@ -469,9 +497,16 @@ input[type=submit]:hover {
     padding: 20px;
 }
 
+.form-button{
+    background-color: #8544b1;
+    color: white;
+    font-size: 1.6vw;
+    padding: 1vh 2vw;
+}
 
-
-
+.disable_button{
+    background: gray ;
+}
 
 
 
